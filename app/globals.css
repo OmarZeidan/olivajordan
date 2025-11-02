@@ -4,6 +4,17 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-primary-50: #f3f5ec;
+  --color-primary-100: #e6ead9;
+  --color-primary-200: #cdd5b3;
+  --color-primary-300: #b5c18d;
+  --color-primary-400: #9cad66;
+  --color-primary-500: #737c4c; /* base */
+  --color-primary-600: #60663f;
+  --color-primary-700: #4d5232;
+  --color-primary-800: #3a3d26;
+  --color-primary-900: #27291a;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -51,7 +62,7 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: var(--color-primary-500);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -118,5 +129,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  a {
+    cursor: pointer;
   }
 }
