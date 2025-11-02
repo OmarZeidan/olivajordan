@@ -11,7 +11,7 @@ export function ThemeToggle() {
       <Button
         variant="outline"
         size="icon"
-        className="rounded-full hidden dark:inline-flex"
+        className="hidden dark:inline-flex"
         onClick={() => setTheme("light")}
       >
         <Sun />
@@ -20,7 +20,7 @@ export function ThemeToggle() {
       <Button
         variant="outline"
         size="icon"
-        className="rounded-full dark:hidden"
+        className="dark:hidden"
         onClick={() => setTheme("dark")}
       >
         <Moon />
