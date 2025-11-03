@@ -1,7 +1,7 @@
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { MenuIcon } from "lucide-react";
 import Link from "next/link";
+import MobileMenu from "./mobile-menu";
 
 export default function Header() {
   return (
@@ -21,7 +21,7 @@ export default function Header() {
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-4">
           <Link
             href="#story"
             className="text-primary-700 hover:text-primary-900 dark:text-gray-300 dark:hover:text-white"
@@ -29,7 +29,13 @@ export default function Header() {
             Our Story
           </Link>
           <Link
-            href="#food"
+            href="#the-place"
+            className="text-primary-700 hover:text-primary-900 dark:text-gray-300 dark:hover:text-white"
+          >
+            The Place
+          </Link>
+          <Link
+            href="#the-food"
             className="text-primary-700 hover:text-primary-900 dark:text-gray-300 dark:hover:text-white"
           >
             The Food
@@ -50,15 +56,7 @@ export default function Header() {
             </Button>
           </Link>
           <ThemeToggle />
-          <Button
-            id="openMenu"
-            size={"icon"}
-            className="md:hidden"
-            aria-label="Open menu"
-          >
-            <MenuIcon />
-            <span className="sr-only">Open menu</span>
-          </Button>
+          <MobileMenu />
         </div>
       </div>
     </header>
