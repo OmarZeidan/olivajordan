@@ -16,7 +16,7 @@ export default function SectionThePlace() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true, amount: 0.3 }}
-          className="relative h-[50vh] md:h-auto"
+          className="relative h-[50vh] md:h-auto max-md:order-1"
         >
           <Image
             src="/images/image-oliva-food-on-table.webp"
