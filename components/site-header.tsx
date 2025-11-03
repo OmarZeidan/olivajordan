@@ -5,7 +5,10 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-background/80 backdrop-blur dark:border-gray-800 dark:bg-[#1b1b1b]/80">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-background/80 backdrop-blur 
+  dark:border-[#2b2c23] dark:bg-[#1b1c16]/80"
+    >
       <div className="mx-auto flex items-center justify-between container-inner py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center" aria-label="Oliva — Home">

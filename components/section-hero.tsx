@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function SectionHero() {
   return (
     <section
-      className="relative max-md:py-42 md:h-svh flex flex-col items-center text-center justify-center overflow-hidden text-white"
+      className="relative max-md:py-42 md:h-svh flex flex-col items-center text-center justify-center overflow-hidden text-primary-100"
       aria-label="Oliva Italian Restaurant Hero"
     >
       <div className="container-inner flex flex-col items-center space-y-6 group overflow-hidden">
@@ -42,16 +42,16 @@ export default function SectionHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-[45px]/[52px] md:text-7xl/[75px]  max-w-4xl relative text-center font-playfair font-black"
+          className="text-[45px]/[52px] md:text-7xl/[75px] max-w-5xl relative text-center font-playfair font-black"
         >
-          A taste of Italy, baked into Amman’s rhythm
+          Authentic Italian taste, crafted in the heart of Amman
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="text-xl max-w-2xl relative text-center mx-auto"
+          className="text-xl max-w-xl relative text-center mx-auto"
         >
           Since 2011, Oliva has been serving clay-oven pizzas, handmade pasta,
           and seasonal dishes — a neighborhood restaurant rooted in flavor and
