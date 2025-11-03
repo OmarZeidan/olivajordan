@@ -27,13 +27,13 @@ export default function SectionStory() {
             {/** Right side */}
             <div className="relative h-[420px] md:h-[520px]">
               <Image
-                src="/image-oliva-interior-1.jpg"
+                src="/images/image-oliva-interior-1.webp"
                 alt="Clay oven at Oliva"
                 fill
                 className="object-cover rounded-2xl shadow-lg"
               />
               <Image
-                src="/image-hero-oliva-3.jpg"
+                src="/images/image-hero-oliva-3.webp"
                 alt="Oliva table scene"
                 width={280}
                 height={200}

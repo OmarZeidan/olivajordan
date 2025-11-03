@@ -18,7 +18,7 @@ export default function SectionHero() {
           className="absolute inset-0 m-0"
         >
           <Image
-            src="/image-hero-oliva-2.jpg"
+            src="/images/image-hero-oliva-2.webp"
             alt="Clay-oven pizza baking at Oliva Italian Restaurant, Amman"
             fill
             priority

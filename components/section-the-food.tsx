@@ -64,7 +64,7 @@ export default function SectionTheFood() {
           className="relative h-[50vh] md:h-auto"
         >
           <Image
-            src="/image-hero-oliva.jpg"
+            src="/images/image-hero-oliva.webp"
             alt="Oliva’s warm interior with clay oven and communal tables"
             fill
             priority={false}

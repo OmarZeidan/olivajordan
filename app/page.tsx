@@ -1,3 +1,4 @@
+import SectionGallery from "@/components/section-gallery";
 import SectionHero from "@/components/section-hero";
 import SectionStory from "@/components/section-story";
 import SectionTheFood from "@/components/section-the-food";
@@ -11,6 +12,7 @@ export default function Home() {
 
       <SectionThePlace />
       <SectionTheFood />
+      <SectionGallery />
     </>
   );
 }

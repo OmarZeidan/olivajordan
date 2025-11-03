@@ -19,7 +19,7 @@ export default function SectionThePlace() {
           className="relative h-[50vh] md:h-auto"
         >
           <Image
-            src="/oliva-food-on-table.jpg"
+            src="/images/image-oliva-food-on-table.webp"
             alt="Oliva’s warm interior with clay oven and communal tables"
             fill
             priority={false}
