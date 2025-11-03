@@ -67,8 +67,8 @@
   --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: var(--color-primary-500);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: #f6f6ea; /* a touch lighter */
+  --secondary-foreground: #4a452b; /* gentle olive-brown text */
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
   --accent: oklch(0.968 0.007 247.896);
@@ -95,7 +95,7 @@
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
+  --background: #1b1c16;
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
@@ -103,8 +103,8 @@
   --popover-foreground: oklch(0.984 0.003 247.858);
   --primary: oklch(0.929 0.013 255.508);
   --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: #2a2b20; /* deep olive charcoal */
+  --secondary-foreground: #f4f5e4; /* same warm cream for contrast */
   --muted: oklch(0.279 0.041 260.031);
   --muted-foreground: oklch(0.704 0.04 256.788);
   --accent: oklch(0.279 0.041 260.031);
@@ -146,5 +146,8 @@
 @layer components {
   .container-inner {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .eyebrow {
+    @apply text-sm uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 mb-2;
   }
 }

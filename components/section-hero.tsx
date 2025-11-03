@@ -15,7 +15,7 @@ export default function SectionHero() {
           initial={{ scale: 1.05, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0"
+          className="absolute inset-0 m-0"
         >
           <Image
             src="/image-hero-oliva-2.jpg"
@@ -25,7 +25,7 @@ export default function SectionHero() {
             className="object-cover brightness-[0.9] contrast-[1.05] saturate-[1.2] hue-rotate-[5deg] transition-transform duration-700 ease-out group-hover:scale-102"
           />
         </motion.div>
-        <div className="absolute inset-0 bg-black/55 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-80 h-full" />
+        <div className="absolute inset-0 bg-black/55 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-80 h-full m-0" />
 
         <motion.div
           initial={{ opacity: 0, y: 10 }}
