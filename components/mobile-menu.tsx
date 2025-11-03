@@ -41,7 +41,7 @@ export default function MobileMenu() {
         side="top"
         className={cn(
           "w-full border-b border-primary/10",
-          "bg-primary-100/75 backdrop-blur",
+          "bg-primary-100/75 dark:bg-background/60 backdrop-blur",
           "rounded-b-2xl shadow-sm",
           "pt-[max(env(safe-area-inset-top),12px)] pb-6",
           "data-[state=open]:animate-in data-[state=open]:slide-in-from-top",
