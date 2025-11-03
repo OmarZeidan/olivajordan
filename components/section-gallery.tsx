@@ -39,7 +39,7 @@ export default function SectionGallery() {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-16">
             <div className="relative col-span-2 row-span-2 overflow-hidden rounded-2xl">
               <Image
                 src={images[0]}
