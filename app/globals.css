@@ -150,4 +150,12 @@
   .eyebrow {
     @apply text-sm uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 mb-2;
   }
+  .section-heading {
+    @apply font-playfair text-4xl md:text-5xl font-extrabold leading-tight tracking-tight 
+    text-primary-900 dark:text-primary-100;
+  }
+  .section-description {
+    @apply max-w-2xl text-base md:text-lg text-primary-800/90 dark:text-primary-100/80 
+    leading-relaxed mt-4;
+  }
 }
