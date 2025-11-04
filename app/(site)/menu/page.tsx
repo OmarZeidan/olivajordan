@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Clock, Leaf } from "lucide-react";
+import { Clock, Leaf, Plus } from "lucide-react";
 import Image from "next/image";
 import * as React from "react";
 import SVGChef from "../../../public/svg-chef.svg";
@@ -15,7 +15,8 @@ type MenuItem = {
   name: string;
   desc?: string;
   price: string;
-  badge?: "V" | "VG" | "SPICY" | "NEW";
+  badge?: "V" | "VG" | "SPICY" | "NEW" | "ADD-ON";
+  isSmaller?: boolean;
 };
 type Section = {
   id: string;
@@ -112,16 +113,30 @@ export const MENU: Section[] = [
         name: "Arrabiata",
         desc: "Penne with a jalapeno spiced tomato sauce topped with green olives, cherry tomatoes and fresh parsley",
         price: "5.25 JD",
+        badge: "SPICY",
       },
       {
         name: "Rose",
         desc: "Penne with tomato sauce and creamy white sauce and jalapeno spiced tomato sauce",
         price: "6.00 JD",
+        badge: "SPICY",
       },
       {
         name: "Aglio e Olio",
         desc: "Linguine with olive oil, sauteed garlic, fresh coriander and fresh parsley topped with cherry tomatoes",
         price: "5.00 JD",
+      },
+      {
+        name: "extra chicken",
+        price: "0.75 JD",
+        isSmaller: true,
+        badge: "ADD-ON",
+      },
+      {
+        name: "extra vegetables/extra sauce",
+        price: "0.50 JD",
+        isSmaller: true,
+        badge: "ADD-ON",
       },
     ],
   },
@@ -268,7 +283,7 @@ function SVGPepper() {
 
 function MenuRow({ item }: { item: MenuItem }) {
   return (
-    <li className="group">
+    <li className={cn("group", item.isSmaller && "text-sm")}>
       <div className="flex items-center gap-3">
         <div className="flex items-baseline gap-2">
           <p className="font-medium text-primary-900 dark:text-primary-100">
@@ -283,11 +298,9 @@ function MenuRow({ item }: { item: MenuItem }) {
               variant={item.badge === "SPICY" ? "destructive" : "default"}
             >
               {item.badge}
-              {item.badge === "V" ? (
-                <Leaf />
-              ) : (
-                item.badge === "SPICY" && <SVGPepper />
-              )}
+              {item.badge === "V" && <Leaf />}
+              {item.badge === "SPICY" && <SVGPepper />}
+              {item.badge === "ADD-ON" && <Plus />}
             </Badge>
           )}
         </div>
@@ -365,7 +378,7 @@ export default function OlivaMenu() {
             className="
                       w-[min(720px,82%)]
                       object-conver
-                      opacity-5 dark:opacity-15
+                      opacity-10 dark:opacity-15
                       mix-blend-multiply
                       mask-[radial-gradient(ellipse_at_center,black_75%,transparent_85%)]
                       select-none
