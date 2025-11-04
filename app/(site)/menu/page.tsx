@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Leaf } from "lucide-react";
+import { Clock, Leaf } from "lucide-react";
 import Image from "next/image";
 import * as React from "react";
 import SVGChef from "../../../public/svg-chef.svg";
@@ -426,13 +426,14 @@ export default function OlivaMenu() {
           </p>
 
           <div>
-            <p className="uppercase font-semibold text-primary-900 dark:text-primary-200 tracking-wide">
+            <p className="uppercase font-semibold text-primary-900 dark:text-primary-200 tracking-wide flex items-center justify-center gap-1.5">
+              <Clock className="h-3.5 w-3.5 opacity-80" />
               Opening Hours
             </p>
             <ul className="mt-2 space-y-1">
               <li>Daily — 12–11:30 pm</li>
               <li className="italic text-primary-900/80 dark:text-primary-300">
-                Friday — 1:30–11:30 pm
+                Friday — after prayer – 11:30 pm
               </li>
             </ul>
           </div>
