@@ -91,7 +91,7 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 
-  --header-h: 61px;
+  --header-h: 69px;
 }
 
 .dark {
@@ -158,4 +158,8 @@
     @apply max-w-2xl text-base md:text-lg text-primary-800/90 dark:text-primary-100/80 
     leading-relaxed mt-4;
   }
+}
+
+.mt-header-plus {
+  margin-top: calc(var(--header-h) + 20px);
 }
