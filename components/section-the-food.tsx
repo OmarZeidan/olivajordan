@@ -22,7 +22,7 @@ export default function SectionTheFood() {
             <p className="eyebrow">The Food</p>
 
             <h2 className="section-heading">
-              Fresh, Authentic, and Irresistible Taste.
+              Fresh, Authentic, and Irresistible Taste
             </h2>
 
             <div className="section-description space-y-4">

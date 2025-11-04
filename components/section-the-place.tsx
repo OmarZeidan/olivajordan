@@ -40,7 +40,7 @@ export default function SectionThePlace() {
             <p className="eyebrow">The Place</p>
 
             <h2 className="section-heading">
-              Where Simplicity <br /> Meets Flavor.
+              Where Simplicity <br /> Meets Flavor
             </h2>
 
             <div className="section-description space-y-4">
