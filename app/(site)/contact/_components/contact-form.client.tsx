@@ -1,4 +1,3 @@
-// app/contact/_components/ContactForm.client.tsx
 "use client";
 
 import { sendEmail } from "@/app/actions/send-email";
@@ -23,14 +22,12 @@ export default function ContactForm() {
       className="w-full grid gap-8"
       aria-label="Contact form"
     >
-      {/* Honeypot */}
       <input
         type="text"
         name="company"
         className="hidden"
         tabIndex={-1}
         autoComplete="off"
-        value={"sss"}
       />
 
       <div className="grid w-full items-center gap-2">
