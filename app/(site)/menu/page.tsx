@@ -7,7 +7,7 @@ import { Clock, Leaf, Plus } from "lucide-react";
 import Image from "next/image";
 import * as React from "react";
 import SVGChef from "../../../public/svg-chef.svg";
-import SVGLeafs from "../../../public/svg-leaf.svg";
+import SVGLeafs from "../../../public/svg-leafs.svg";
 
 /** TYPES & HELPERS */
 
@@ -259,7 +259,7 @@ function OliveDivider({ className }: { className?: string }) {
       aria-hidden
       className={cn(
         "my-10 h-px w-full bg-linear-to-r from-transparent via-foreground/20 to-transparent",
-        className
+        className,
       )}
     />
   );
@@ -293,7 +293,7 @@ function MenuRow({ item }: { item: MenuItem }) {
             <Badge
               className={cn(
                 "text-[10px]",
-                item.badge === "SPICY" && "bg-red-700/60"
+                item.badge === "SPICY" && "bg-red-700/60",
               )}
               variant={item.badge === "SPICY" ? "destructive" : "default"}
             >
@@ -369,7 +369,7 @@ export default function OlivaMenu() {
           className={cn(
             "flex pointer-events-none absolute inset-0 items-start",
             "transform md:-translate-y-10 z-0",
-            "justify-center"
+            "justify-center",
           )}
         >
           <Image
@@ -390,7 +390,7 @@ export default function OlivaMenu() {
           aria-hidden="true"
           className={cn(
             "flex pointer-events-none absolute bottom-0",
-            "transform md:-translate-y-10 z-0"
+            "transform md:-translate-y-10 z-0",
           )}
         >
           <Image

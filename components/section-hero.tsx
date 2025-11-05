@@ -33,7 +33,7 @@ export default function SectionHero() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="relative z-10 w-fit rounded-xl bg-primary-500/90 px-3 py-1 mx-auto"
         >
-          <p className="text-rumi-500 font-bold text-md text-sm">
+          <p className="text-primary-50 font-medium text-sm">
             Over a Decade of Pizza, Pasta &amp; People
           </p>
         </motion.div>
