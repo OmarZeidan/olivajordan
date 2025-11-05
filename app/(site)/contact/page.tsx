@@ -1,5 +1,24 @@
-// app/contact/page.tsx
+import { Metadata } from "next";
 import ContactForm from "./_components/contact-form.client";
+
+export const metadata: Metadata = {
+  title: "Contact Us – Oliva Italian Restaurant",
+  description:
+    "Reach Oliva Pizza and Pasta in Amman, Jordan — serving authentic Italian cuisine since 2011 in Jabal Al-Lweibdeh and now also in Shmeisani.",
+  openGraph: {
+    title: "Contact Us – Oliva Italian Restaurant",
+    description:
+      "Get in touch with Oliva Pizza, Pasta & More — a neighborhood Italian kitchen in Jabal Al-Lweibdeh and Shmeisani, Amman.",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Oliva Italian Restaurant in Amman – Jabal Al-Lweibdeh and Shmeisani",
+      },
+    ],
+  },
+};
 
 export default function ContactPage() {
   return (

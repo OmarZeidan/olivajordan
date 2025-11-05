@@ -21,18 +21,18 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: {
-    default: "Oliva Italian Restaurant – Amman, Jabal Al Lweibdeh",
-    template: "%s | Oliva Italian Restaurant",
+    default: "Oliva Italian Restaurant – Pizza & Pasta in Amman",
+    template: "%s – Oliva Italian Restaurant",
   },
   description:
-    "Since 2011, Oliva Italian Restaurant in Jabal Al Lweibdeh has served authentic Italian dishes — clay-oven pizzas, fresh pasta, and seasonal salads crafted with local warmth.",
+    "Since 2011, Oliva Pizza and Pasta has been serving authentic Italian cuisine in the heart of Amman. With locations in Jabal Al-Lweibdeh and Shmeisani, Oliva offers clay-oven pizzas, handmade pasta, and fresh seasonal salads — all crafted with care and local rhythm.",
   openGraph: {
-    title: "Oliva Italian Restaurant – Amman, Jabal Al Lweibdeh",
+    title: "Oliva Italian Restaurant – Pizza & Pasta in Amman",
     description:
-      "Authentic Italian cuisine in the heart of Amman — clay-oven pizzas, handmade pasta, and warm hospitality since 2011.",
+      "Oliva Pizza and Pasta serves authentic Italian food in Jabal Al-Lweibdeh and Shmeisani, Amman. Since 2011, Oliva has been known for clay-oven pizzas, handcrafted pasta, and genuine hospitality.",
     url: siteUrl,
-    siteName: "Oliva Restaurant",
-    locale: "en_US",
+    siteName: "Oliva Italian Restaurant",
+    locale: "en_JO",
     type: "website",
   },
   metadataBase: new URL(siteUrl),
