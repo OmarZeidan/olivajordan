@@ -11,7 +11,7 @@ const rubik = Rubik({
   subsets: ["latin"],
 });
 
-export const playfair = Playfair_Display({
+const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   display: "swap",
@@ -34,14 +34,6 @@ export const metadata: Metadata = {
     siteName: "Oliva Restaurant",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/og-oliva.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Oliva Italian Restaurant in Jabal Al Lweibdeh, Amman",
-      },
-    ],
   },
   metadataBase: new URL(siteUrl),
   alternates: {
