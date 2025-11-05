@@ -9,14 +9,6 @@ export const metadata: Metadata = {
     title: "Our Menu – Oliva Italian Restaurant",
     description:
       "Discover Oliva’s menu of pizza, pasta, and seasonal salads — crafted with care in Amman since 2011.",
-    images: [
-      {
-        url: "/menu/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Oliva Italian Restaurant Menu in Amman",
-      },
-    ],
   },
 };
 
