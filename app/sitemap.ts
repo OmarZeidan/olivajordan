@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/#the-food`,
+      url: `${baseUrl}/#our-kitchen`,
       lastModified,
       changeFrequency: "yearly",
       priority: 0.6,

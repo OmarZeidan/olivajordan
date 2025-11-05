@@ -19,8 +19,8 @@ export default function SectionThePlace() {
           className="relative h-[50vh] md:h-auto max-md:order-1"
         >
           <Image
-            src="/images/image-oliva-food-on-table.webp"
-            alt="Oliva’s warm interior with clay oven and communal tables"
+            src="/images/image-interior-oliva.webp"
+            alt="Oliva’s interior image"
             fill
             priority={false}
             className="object-cover md:object-center"
@@ -45,20 +45,31 @@ export default function SectionThePlace() {
 
             <div className="section-description space-y-4">
               <p>
-                At Oliva, guests experience the pleasure of generous,
-                uncomplicated, and flavorsome food. The menu celebrates Italian
-                classics and imaginative salads made with seasonal, locally
-                sourced ingredients. Our clay-oven pizzas feature a crisp crust,
-                Oliva’s signature tomato sauce, carefully balanced toppings, and
-                real Italian mozzarella. Pasta sauces, inspired by traditional
-                recipes, are prepared daily in small batches with fresh herbs.
+                Tucked within the neighborhood rhythm of Amman, Oliva is a place
+                shaped by warmth, light, and the pleasure of good food shared.
+                The space reflects the same principles as our kitchen — modest,
+                grounded, and thoughtfully made. Wood, clay, and natural tones
+                create an atmosphere that feels lived in and welcoming, where
+                weekday lunches stretch into slow afternoons and dinners feel
+                easy and unhurried.
               </p>
               <p>
-                Our salads draw on farm-fresh specialties, offering wholesome,
-                nourishing options with the finest grains and produce. Each dish
-                honors ingredient and tradition — seasoned simply with fresh
-                garlic, sun-ripened tomatoes, hand-picked basil, and
-                cold-pressed local olive oil.
+                The design mirrors the food: authentic, balanced, and full of
+                character. Guests can see the open kitchen at work —{" "}
+                <strong className="font-playfair font-extrabold">
+                  the turning of pizza dough, the fragrance of fresh herbs, the
+                  quiet focus of a team that cooks with care
+                </strong>
+                . Every detail, from the flicker of the oven to the sound of
+                plates being set, carries the same spirit of generosity that
+                defines Oliva.
+              </p>
+              <p>
+                It’s a place built for connection — between people, flavors, and
+                moments — where{" "}
+                <strong className="font-playfair font-extrabold">
+                  simplicity truly meets flavor.
+                </strong>
               </p>
             </div>
           </div>

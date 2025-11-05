@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function SectionTheFood() {
+export default function SectionOurKitchen() {
   return (
     <section
-      id="the-food"
-      aria-label="The Food at Oliva"
+      id="our-kitchen"
+      aria-label="The Kitchen at Oliva"
       className="relative overflow-hidden bg-primary-300 dark:bg-background"
     >
       <div className="grid md:grid-cols-2 min-h-[80vh]">
@@ -19,7 +19,7 @@ export default function SectionTheFood() {
           className="flex items-center px-6 py-16 md:px-16 lg:px-24"
         >
           <div>
-            <p className="eyebrow">The Food</p>
+            <p className="eyebrow">From Our Kitchen</p>
 
             <h2 className="section-heading">
               Fresh, Authentic, and Irresistible Taste
@@ -27,29 +27,29 @@ export default function SectionTheFood() {
 
             <div className="section-description space-y-4">
               <p>
-                At Oliva, food is crafted with a spirit of generosity and
-                simplicity — a reflection of Italian tradition and seasonal
-                abundance. Each dish begins with honest ingredients and ends
-                with full, balanced flavor. From the warmth of the clay oven to
-                the first bite, the focus is always on freshness, care, and the
-                pleasure of sharing good food.
+                Behind every plate at Oliva is a kitchen built on honesty,
+                rhythm, and care. It’s where the warmth of the clay oven meets
+                the calm precision of daily craft — dough rising slowly, sauces
+                stirred patiently, herbs added just before serving. Each dish
+                begins with good ingredients and ends with a balance of flavor
+                that feels effortless yet intentional.
               </p>
               <p>
                 Our pizzas are baked to a perfect crisp, layered with Oliva’s
-                signature tomato sauce, fresh mozzarella, and toppings that
-                complement rather than compete. Pasta sauces are prepared daily
-                in small batches, inspired by time-honored recipes and lifted by
-                the fragrance of fresh herbs. Every plate is designed to feel
-                both familiar and new, combining authenticity with a light,
-                modern touch.
+                signature tomato sauce, real mozzarella, and toppings that
+                complement rather than compete. Pasta sauces are made in small
+                batches each day, guided by traditional recipes and a respect
+                for timing and freshness.
               </p>
               <p>
-                Salads celebrate the season’s best produce — bright, nourishing,
-                and full of texture. Farm-fresh vegetables, grains, and herbs
-                come together simply, finished with cold-pressed local olive
-                oil, sun-ripened tomatoes, and hand-picked basil. It’s food that
-                feels effortless yet deeply satisfying — honest, flavorful, and
-                unmistakably Oliva.
+                The kitchen moves with quiet focus — open, visible, and full of
+                life. It’s a space where simplicity is not a shortcut but a
+                discipline, and where every meal carries the same spirit that
+                has defined Oliva since 2011:{" "}
+                <strong className="font-playfair italic font-extrabold">
+                  food made by hand, shared with warmth, and remembered for its
+                  honest flavor.
+                </strong>
               </p>
             </div>
           </div>
@@ -64,8 +64,8 @@ export default function SectionTheFood() {
           className="relative h-[50vh] md:h-auto"
         >
           <Image
-            src="/images/image-hero-oliva.webp"
-            alt="Oliva’s warm interior with clay oven and communal tables"
+            src="/images/image-oliva-kitchen.webp"
+            alt="Oliva’s warm interior with clay oven"
             fill
             priority={false}
             className="object-cover md:object-center"

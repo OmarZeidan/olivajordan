@@ -3,7 +3,6 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import SVGChef from "@/public/svg-chef.svg";
-import SVGLeafs from "@/public/svg-leafs.svg";
 import { motion } from "framer-motion";
 import { Clock, Leaf, Plus } from "lucide-react";
 import Image from "next/image";
@@ -372,8 +371,9 @@ export default function SectionOlivaMenu() {
             "justify-center",
           )}
         >
-          <Image
-            src={SVGLeafs}
+          {/*eslint-disable-next-line @next/next/no-img-element*/}
+          <img
+            src="/svg-leafs.svg"
             alt=""
             className="
                       w-[min(720px,82%)]
@@ -446,7 +446,7 @@ export default function SectionOlivaMenu() {
             <ul className="mt-2 space-y-1">
               <li>Daily — 12–11:30 pm</li>
               <li className="italic text-primary-900/80 dark:text-primary-300">
-                Friday — after prayer – 11:30 pm
+                After Friday prayer – 11:30 pm
               </li>
             </ul>
           </div>

@@ -6,7 +6,7 @@ import MobileMenu from "./mobile-menu";
 export default function Header() {
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-background/80 backdrop-blur 
+      className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-background/80 backdrop-blur
   dark:border-[#2b2c23] dark:bg-[#1b1c16]/80"
     >
       <div className="mx-auto flex items-center justify-between container-inner py-4">
@@ -35,10 +35,10 @@ export default function Header() {
             The Place
           </Link>
           <Link
-            href="/#the-food"
+            href="/#our-kitchen"
             className="text-primary-700 hover:text-primary-900 dark:text-gray-300 dark:hover:text-white"
           >
-            The Food
+            Our Kitchen
           </Link>
           <Link
             href="/contact"

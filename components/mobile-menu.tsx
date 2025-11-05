@@ -16,7 +16,7 @@ import Link from "next/link";
 const items = [
   { href: "/#story", label: "Our Story" },
   { href: "/#the-place", label: "The Place" },
-  { href: "/#the-food", label: " The Food" },
+  { href: "/#our-kitchen", label: "Our Kitchen" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -45,7 +45,7 @@ export default function MobileMenu() {
           "rounded-b-2xl shadow-sm",
           "pt-[max(env(safe-area-inset-top),12px)] pb-6",
           "data-[state=open]:animate-in data-[state=open]:slide-in-from-top",
-          "data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top"
+          "data-[state=closed]:animate-out data-[state=closed]:slide-out-to-top",
         )}
       >
         {/* Header row inside the sheet */}

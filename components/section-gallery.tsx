@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  "/images/image-hero-oliva-3.webp",
-  "/images/image-manakeesh.webp",
+  "/images/image-oliva-enterance.webp",
   "/images/image-oliva-interior-1.webp",
-  "/images/image-oliva-food-on-table.webp",
   "/images/oliva-enterance-oven.webp",
-  "/images/image-hero-oliva.webp",
+  "/images/image-team.webp",
+  "/images/image-interior-people.webp",
+  "/images/image-oliva-food-on-table.webp",
 ];
 export default function SectionGallery() {
   return (
     <>
       <section
-        id="the-food"
-        aria-label="The Food at Oliva"
+        id="our-gallery"
+        aria-label="Some moments at Oliva"
         className="relative overflow-hidden bg-primary-100 dark:bg-background"
       >
         <div className="container-inner py-16 md:py-24">
@@ -30,11 +30,11 @@ export default function SectionGallery() {
             <div>
               <p className="eyebrow">From the Gallery</p>
 
-              <h2 className="section-heading">Moments from Our Table</h2>
+              <h2 className="section-heading">Moments from Oliva</h2>
 
               <p className="section-description">
-                Capturing the spirit of Oliva — the glow of the oven, the joy of
-                shared meals, and the comfort that fills every corner.
+                Capturing the spirit of Oliva — the glow of the oven, the hum of
+                the kitchen, and the joy that fills every table.
               </p>
             </div>
           </motion.div>
