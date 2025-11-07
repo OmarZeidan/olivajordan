@@ -33,7 +33,7 @@ export default function SectionGallery() {
               <h2 className="section-heading">Moments from Oliva</h2>
 
               <p className="section-description">
-                Capturing the spirit of Oliva — the glow of the oven, the hum of
+                Capturing the spirit of Oliva, the glow of the oven, the hum of
                 the kitchen, and the joy that fills every table.
               </p>
             </div>

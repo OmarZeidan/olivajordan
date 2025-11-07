@@ -47,7 +47,7 @@ export default function SectionThePlace() {
               <p>
                 Tucked within the neighborhood rhythm of Amman, Oliva is a place
                 shaped by warmth, light, and the pleasure of good food shared.
-                The space reflects the same principles as our kitchen — modest,
+                The space reflects the same principles as our kitchen: modest,
                 grounded, and thoughtfully made. Wood, clay, and natural tones
                 create an atmosphere that feels lived in and welcoming, where
                 weekday lunches stretch into slow afternoons and dinners feel
@@ -55,18 +55,19 @@ export default function SectionThePlace() {
               </p>
               <p>
                 The design mirrors the food: authentic, balanced, and full of
-                character. Guests can see the open kitchen at work —{" "}
+                character. Guests can see the open kitchen at work,{" "}
                 <strong className="font-playfair font-extrabold">
                   the turning of pizza dough, the fragrance of fresh herbs, the
-                  quiet focus of a team that cooks with care
-                </strong>
-                . Every detail, from the flicker of the oven to the sound of
+                  quiet focus of a team that cooks with care.
+                </strong>{" "}
+                Every detail, from the flicker of the oven to the sound of
                 plates being set, carries the same spirit of generosity that
                 defines Oliva.
               </p>
+
               <p>
-                It’s a place built for connection — between people, flavors, and
-                moments — where{" "}
+                It’s a place built for connection between people, flavors, and
+                moments, where{" "}
                 <strong className="font-playfair font-extrabold">
                   simplicity truly meets flavor.
                 </strong>

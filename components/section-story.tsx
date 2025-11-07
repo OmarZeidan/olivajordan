@@ -19,8 +19,8 @@ export default function SectionStory() {
               <p className="section-description">
                 What began as a small kitchen in Jabal Al Lweibdeh grew into a
                 gathering place for friends, families, and neighbors. At Oliva,
-                every meal is shaped by care — fresh pasta, wood-fired pizza,
-                and the comfort of sharing something genuine.
+                every meal is shaped by care, with fresh pasta, wood-fired
+                pizza, and the comfort of sharing something genuine.
               </p>
             </div>
 

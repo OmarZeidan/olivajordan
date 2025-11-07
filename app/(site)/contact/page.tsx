@@ -38,7 +38,7 @@ export default function ContactPage() {
           <h1 className="section-heading">Let’s talk over good food</h1>
           <p className="section-description max-w-md">
             Planning a gathering, have a question about our menu, or just want
-            to say hello? Send us a message — we’d love to hear from you.
+            to say hello? Send us a message; we’d love to hear from you.
           </p>
 
           {/* quick info block */}
@@ -55,6 +55,8 @@ export default function ContactPage() {
                 <div className="mt-2">
                   <Link
                     href="https://maps.google.com/?q=Oliva+Pizza+and+Pasta+Amman"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="underline underline-offset-4 hover:no-underline"
                   >
                     Open in Google Maps
@@ -69,7 +71,7 @@ export default function ContactPage() {
                 <span>Hours</span>
               </div>
               <div className="text-sm/6 text-muted-foreground">
-                Daily 12:00 – 11:30 pm
+                Daily — 12–11:30 pm
                 <br />
                 Friday after prayer – 11:30 pm
               </div>

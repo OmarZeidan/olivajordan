@@ -414,7 +414,7 @@ export default function SectionOlivaMenu() {
           </h1>
           <p className="mx-auto mt-3 max-w-xl text-primary-800/80 dark:text-primary-100/70">
             Authentic Italian recipes, crafted with care and seasonal
-            ingredients — a reflection of our kitchen in Jabal Al Lweibdeh.
+            ingredients, a reflection of our kitchen in Jabal Al Lweibdeh.
           </p>
         </header>
 

@@ -29,7 +29,7 @@ export default function SectionOurKitchen() {
               <p>
                 Behind every plate at Oliva is a kitchen built on honesty,
                 rhythm, and care. It’s where the warmth of the clay oven meets
-                the calm precision of daily craft — dough rising slowly, sauces
+                the calm precision of daily craft: dough rising slowly, sauces
                 stirred patiently, herbs added just before serving. Each dish
                 begins with good ingredients and ends with a balance of flavor
                 that feels effortless yet intentional.
@@ -42,7 +42,7 @@ export default function SectionOurKitchen() {
                 for timing and freshness.
               </p>
               <p>
-                The kitchen moves with quiet focus — open, visible, and full of
+                The kitchen moves with quiet focus, open, visible, and full of
                 life. It’s a space where simplicity is not a shortcut but a
                 discipline, and where every meal carries the same spirit that
                 has defined Oliva since 2011:{" "}
