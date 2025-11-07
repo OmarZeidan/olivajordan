@@ -14,25 +14,45 @@ export default function Header() {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   useEffect(() => {
+    if (!isHome) return;
+
     const sections = Array.from(
       document.querySelectorAll<HTMLElement>("section[id]"),
     );
-    if (sections.length === 0) return;
+    if (!sections.length) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.target.id) {
-            setActiveId(entry.target.id);
-          }
-        });
+        // check if top sentinel is visible
+        const topEntry = entries.find(
+          (entry) => entry.target.id === "top-sentinel" && entry.isIntersecting,
+        );
+        if (topEntry) {
+          requestAnimationFrame(() => setActiveId(null));
+          return;
+        }
+
+        // pick the most visible section to avoid rapid toggling
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        const nextId = visible?.target.id || null;
+
+        // prevent unnecessary state updates
+        if (nextId && nextId !== activeId) {
+          requestAnimationFrame(() =>
+            setActiveId((prev) => (prev === nextId ? prev : nextId)),
+          );
+        }
       },
       { rootMargin: "-40% 0px -50% 0px", threshold: 0 },
     );
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
-  }, [isHome]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isHome]); // don't include activeId to keep observer stable
 
   return (
     <header
@@ -41,7 +61,12 @@ export default function Header() {
     >
       <div className="mx-auto flex items-center justify-between container-inner py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center" aria-label="Oliva — Home">
+        <Link
+          href="/"
+          className="flex items-center"
+          aria-label="Oliva — Home"
+          onClick={() => setActiveId(null)}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo-oliva.svg"

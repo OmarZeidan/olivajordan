@@ -75,6 +75,8 @@ export default function SectionHero() {
           </Link>
         </motion.div>
       </div>
+      {/* Only for the sake of active items on the header -- see site-header.tsx */}
+      <section id="top-sentinel" aria-hidden="true" className="h-px" />
     </section>
   );
 }
