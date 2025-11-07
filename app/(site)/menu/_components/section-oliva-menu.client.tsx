@@ -362,7 +362,7 @@ export default function SectionOlivaMenu() {
       aria-label="Oliva Menu"
       className="bg-primary-100 dark:bg-background mt-(--header-h) py-16 md:py-24"
     >
-      <div className="container-inner  border-2 rounded-2xl border-primary-500 dark:border-border bg-primary-200 dark:bg-primary/10 py-16 relative">
+      <div className="container-inner max-xl:mx-2 mx-auto border-2 rounded-2xl border-primary-500 dark:border-border bg-primary-200 dark:bg-primary/10 py-16 relative">
         <div
           aria-hidden="true"
           className={cn(
