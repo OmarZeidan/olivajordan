@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Rubik } from "next/font/google";
 
 import Footer from "@/components/site-footer";
-import Header from "@/components/site-header";
+import Header from "@/components/site-header.client";
 import "./globals.css";
 
 const rubik = Rubik({

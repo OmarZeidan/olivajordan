@@ -8,19 +8,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { navLinks } from "@/lib/data.nav";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
+import { NavLink } from "./nav-item";
 
-const items = [
-  { href: "/#story", label: "Our Story" },
-  { href: "/#the-place", label: "The Place" },
-  { href: "/#our-kitchen", label: "Our Kitchen" },
-  { href: "/contact", label: "Contact" },
-];
-
-export default function MobileMenu() {
+interface Props {
+  activeId: string | null;
+  pathname: string;
+}
+export default function MobileMenu({ activeId, pathname }: Props) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -83,21 +82,23 @@ export default function MobileMenu() {
             }}
             className="flex flex-col gap-1 divide-y divide-primary/10"
           >
-            {items.map((item) => (
+            {navLinks.map((item) => (
               <motion.li
                 key={item.href}
                 variants={{
                   hidden: { y: 6, opacity: 0 },
                   show: { y: 0, opacity: 1 },
                 }}
+                className="block rounded-xl px-3 py-3 text-lg  text-center"
               >
                 <SheetClose asChild>
-                  <Link
+                  <NavLink
+                    key={item.href}
                     href={item.href}
-                    className="block rounded-xl px-3 py-3 text-lg active:bg-muted/70 transition-colors text-center"
-                  >
-                    {item.label}
-                  </Link>
+                    label={item.label}
+                    activeId={activeId}
+                    pathname={pathname}
+                  />
                 </SheetClose>
               </motion.li>
             ))}
