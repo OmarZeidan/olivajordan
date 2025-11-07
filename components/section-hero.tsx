@@ -54,7 +54,7 @@ export default function SectionHero() {
           className="text-xl max-w-xl relative text-center mx-auto"
         >
           Since 2011, Oliva has been serving clay-oven pizzas, handmade pasta,
-          and seasonal dishes — a neighborhood restaurant rooted in flavor and
+          and seasonal dishes, a neighborhood restaurant rooted in flavor and
           community.
         </motion.p>
         <motion.div
