@@ -14,7 +14,8 @@ export default function SectionStory() {
             <div>
               <p className="eyebrow">Our Story</p>
               <h2 className="section-heading">
-                From a Clay Oven to <br /> a City Tradition
+                From a Clay Oven to <br className="max-lg:hidden" /> a City
+                Tradition
               </h2>
               <p className="section-description">
                 What began as a small kitchen in Jabal Al Lweibdeh grew into a
