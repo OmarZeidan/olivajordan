@@ -3,7 +3,10 @@ import { Clock } from "lucide-react";
 
 export default function SectionHint() {
   return (
-    <section className="relative overflow-hidden bg-primary-200 dark:bg-background text-center py-4 text-sm">
+    <section
+      className="relative overflow-hidden bg-primary-200 dark:bg-background text-center py-4 text-sm"
+      aria-label="Opening Hours of Oliva"
+    >
       <div>
         <p className="uppercase font-semibold text-primary-900 dark:text-primary-200 tracking-wide flex items-center justify-center gap-1.5">
           <Clock className="h-3.5 w-3.5 opacity-80" />

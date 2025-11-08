@@ -8,7 +8,7 @@ export default function SectionHero() {
   return (
     <section
       className="relative max-md:py-42 md:h-svh flex flex-col items-center text-center justify-center overflow-hidden text-primary-100"
-      aria-label="Oliva Italian Restaurant Hero"
+      aria-label="Oliva Italian Restaurant Hero Section"
     >
       <div className="container-inner flex flex-col items-center space-y-6 group overflow-hidden">
         <motion.div
@@ -63,16 +63,17 @@ export default function SectionHero() {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="flex gap-2 relative z-10"
         >
-          <Link href="#story">
-            <Button size={"2xl"} className="uppercase" variant={"static"}>
-              Our Story
-            </Button>
-          </Link>
-          <Link href="/menu">
-            <Button size="2xl" variant={"static-outline"} className="uppercase">
-              Our Menu
-            </Button>
-          </Link>
+          <Button asChild size={"2xl"} className="uppercase" variant={"static"}>
+            <Link href="#story">Our Story</Link>
+          </Button>
+          <Button
+            asChild
+            size="2xl"
+            variant={"static-outline"}
+            className="uppercase"
+          >
+            <Link href="/menu">Our Menu</Link>
+          </Button>
         </motion.div>
       </div>
       {/* Only for the sake of active items on the header -- see site-header.tsx */}

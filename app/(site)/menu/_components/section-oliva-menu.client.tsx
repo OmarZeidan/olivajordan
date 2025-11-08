@@ -257,7 +257,7 @@ function OliveDivider({ className }: { className?: string }) {
     <div
       aria-hidden
       className={cn(
-        "my-10 h-px w-full bg-linear-to-r from-transparent via-foreground/20 to-transparent",
+        "my-10 h-px w-full bg-linear-to-r from-transparent via-foreground/30 to-transparent",
         className,
       )}
     />

@@ -90,11 +90,11 @@ export default function Header() {
 
         {/* Right Side with mobile menu */}
         <div className="flex items-center space-x-4">
-          <Link className="hidden md:flex" href="/menu">
-            <Button className="rounded-xl w-full flex items-center">
+          <Button asChild className="rounded-xl w-full flex items-center">
+            <Link className="hidden md:flex max-w-fit" href="/menu">
               Explore Our Menu
-            </Button>
-          </Link>
+            </Link>
+          </Button>
           <ThemeToggle />
           <MobileMenu activeId={activeId} pathname={pathname} />
         </div>
