@@ -7,248 +7,7 @@ import { motion } from "framer-motion";
 import { Clock, Leaf, Plus } from "lucide-react";
 import Image from "next/image";
 import * as React from "react";
-
-/** TYPES & HELPERS */
-
-type MenuItem = {
-  name: string;
-  desc?: string;
-  price: string;
-  badge?: "V" | "VG" | "SPICY" | "NEW" | "ADD-ON";
-  isSmaller?: boolean;
-};
-type Section = {
-  id: string;
-  title: string;
-  eyebrow?: string;
-  items: MenuItem[];
-};
-
-/**MENU DATA */
-
-const MENU: Section[] = [
-  {
-    id: "appetizers",
-    title: "Appetizers",
-    items: [
-      {
-        name: "Bruschetta 2/4 pcs",
-        desc: "Toasted bread topped with tomato, fresh basil, spring onion and balsamic vinegar",
-        price: "2.25 / 3.25 JD",
-      },
-      {
-        name: "Garlic Bread 2/4 pcs",
-        desc: "Toasted bread with garlic butter topped with mozzarella",
-        price: "1.75 / 2.50 JD",
-      },
-      {
-        name: "Garlic Pesto Bread 2/4 pcs",
-        desc: "Toasted bread with garlic butter topped with mozzarella and basil pesto",
-        price: "2.00 / 3.00 JD",
-      },
-    ],
-  },
-  {
-    id: "salads",
-    title: "Salads",
-    items: [
-      {
-        name: "Rocca",
-        desc: "Rocca, fresh mushrooms, cranberries, walnuts and Padano cheese with balsamic dressing",
-        price: "5.00 JD",
-      },
-      {
-        name: "Caprese",
-        desc: "Cherry tomatoes, bufala cheese and fresh basil with olive oil with balsamic dressing",
-        price: "6.00 JD",
-      },
-      {
-        name: "Quinoa",
-        desc: "Quinoa, kale, beetroot, red onion, sundried tomatoes, feta cheese, raisins and fresh coriander with vinaigrette dressing",
-        price: "6.00 JD",
-      },
-      {
-        name: "Green",
-        desc: "Iceberg lettuce, avocado, cucumber, carrot, spring onion, fresh dill and sunflower seeds with honey mustard dressing",
-        price: "4.75 JD",
-      },
-      {
-        name: "Mango (seasonal)",
-        desc: "Mango, avocado, kale, red cabbage, pecan nuts, dried cranberry, coriander, honey mustard sauce",
-        price: "6.50 JD",
-      },
-    ],
-  },
-  {
-    id: "pasta",
-    title: "Pasta",
-    items: [
-      {
-        name: "Lasagna",
-        desc: "Lasagna with a minced beef, tomato sauce and bechamel sauce",
-        price: "7.50 JD",
-      },
-      {
-        name: "Bolognese",
-        desc: "Linguine with a minced beef and tomato sauce",
-        price: "6.50 JD",
-      },
-      {
-        name: "Pesto",
-        desc: "Penne with basil pesto topped with cherry tomatoes",
-        price: "6.00 JD",
-      },
-      {
-        name: "Pesto Creamy",
-        desc: "Penne with basil pesto and creamy white sauce",
-        price: "6.50 JD",
-      },
-      {
-        name: "Alfredo",
-        desc: "Linguine with a creamy white sauce",
-        price: "6.00 JD",
-      },
-      {
-        name: "Arrabiata",
-        desc: "Penne with a jalapeno spiced tomato sauce topped with green olives, cherry tomatoes and fresh parsley",
-        price: "5.25 JD",
-        badge: "SPICY",
-      },
-      {
-        name: "Rose",
-        desc: "Penne with tomato sauce and creamy white sauce and jalapeno spiced tomato sauce",
-        price: "6.00 JD",
-        badge: "SPICY",
-      },
-      {
-        name: "Aglio e Olio",
-        desc: "Linguine with olive oil, sauteed garlic, fresh coriander and fresh parsley topped with cherry tomatoes",
-        price: "5.00 JD",
-      },
-      {
-        name: "extra chicken",
-        price: "0.75 JD",
-        isSmaller: true,
-        badge: "ADD-ON",
-      },
-      {
-        name: "extra vegetables/extra sauce",
-        price: "0.50 JD",
-        isSmaller: true,
-        badge: "ADD-ON",
-      },
-    ],
-  },
-  {
-    id: "pizza",
-    title: "Pizza",
-    eyebrow: "Served with fresh basil",
-    items: [
-      {
-        name: "Bufala",
-        desc: "Tomato sauce and bufala cheese",
-        price: "8.00 JD",
-      },
-      {
-        name: "Margherita",
-        desc: "Oliva sauce and mozzarella",
-        price: "5.25 JD",
-      },
-      {
-        name: "Vegetarian",
-        desc: "Oliva sauce, mozzarella, cherry tomatoes, fresh mushrooms, peppers and mixed olives",
-        price: "6.00 JD",
-      },
-      {
-        name: "Diavola",
-        desc: "Oliva sauce, mozzarella and pepperoni",
-        price: "6.00 JD",
-      },
-      {
-        name: "Burrata",
-        desc: "Oliva sauce, mozzarella and creamy burrata cheese",
-        price: "9.00 JD",
-      },
-      {
-        name: "Funghi",
-        desc: "Oliva sauce, mozzarella and fresh mushrooms",
-        price: "6.00 JD",
-      },
-      {
-        name: "Spinach",
-        desc: "Oliva sauce, mozzarella, spinach, feta cheese, lemon and garlic infused oil",
-        price: "6.00 JD",
-      },
-      {
-        name: "Quattro Formaggi",
-        desc: "Oliva sauce, mozzarella, cheddar, Padano and Danish blue cheese",
-        price: "6.00 JD",
-      },
-      {
-        name: "Three Meats",
-        desc: "Oliva sauce, mozzarella, beef bacon, roast beef and pepperoni",
-        price: "6.00 JD",
-      },
-      {
-        name: "Anchovy",
-        desc: "Oliva sauce, mozzarella, anchovies, cherry tomatoes, capers, green olives and garlic",
-        price: "6.00 JD",
-      },
-      {
-        name: "Tuna",
-        desc: "Oliva sauce, mozzarella, tuna, capers, spring onion, green olives and lemon",
-        price: "7.00 JD",
-      },
-      {
-        name: "Beef Bacon",
-        desc: "Oliva sauce, mozzarella and beef bacon",
-        price: "6.00 JD",
-      },
-      {
-        name: "Salmon",
-        desc: "Oliva sauce, mozzarella, salmon, capers, spring onion and lemon",
-        price: "7.00 JD",
-      },
-      {
-        name: "Chicken",
-        desc: "Oliva sauce, mozzarella, grilled chicken and green olives",
-        price: "6.00 JD",
-      },
-      {
-        name: "Oliva",
-        desc: "Oliva sauce, mozzarella, roast beef, turkey, fresh mushrooms, peppers and mixed olives",
-        price: "6.00 JD",
-      },
-    ],
-  },
-  {
-    id: "desserts",
-    title: "Desserts",
-    items: [
-      {
-        name: "Tiramisu",
-        desc: "Espresso, mascarpone, cocoa",
-        price: "3.50 JD",
-      },
-      {
-        name: "Affogato",
-        desc: "Vanilla gelato with espresso",
-        price: "2.75 JD",
-      },
-    ],
-  },
-  {
-    id: "drinks",
-    title: "Drinks",
-    items: [
-      { name: "Fresh Orange Juice", price: "3.00 JD" },
-      { name: "Mineral water", price: "0.75 JD" },
-      { name: "Espresso", price: "1.75 JD" },
-      { name: "Soft drink", price: "1.00 JD" },
-      { name: "Sparkling Water", price: "1.50 JD" },
-    ],
-  },
-];
+import { MenuItem, Section } from "../_utils";
 
 /** SMALL DIVIDER */
 
@@ -355,7 +114,18 @@ function MenuSection({ section, index }: { section: Section; index: number }) {
 
 /** MAIN MENU COMPONENT */
 
-export default function SectionOlivaMenu() {
+export default function SectionOlivaMenu({
+  sections,
+  fetchedAt,
+}: {
+  sections: Section[];
+  fetchedAt: string;
+}) {
+  const updated = new Date(fetchedAt).toLocaleString("en-GB", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  });
+
   return (
     <section
       id="oliva-menu"
@@ -422,10 +192,10 @@ export default function SectionOlivaMenu() {
 
         {/* Sections */}
         <div className="mx-auto max-w-4xl">
-          {MENU.map((section, i) => (
+          {sections.map((section, i) => (
             <React.Fragment key={section.id}>
               <MenuSection section={section} index={i} />
-              {i < MENU.length - 1 && <OliveDivider />}
+              {i < sections.length - 1 && <OliveDivider />}
             </React.Fragment>
           ))}
         </div>
@@ -437,6 +207,7 @@ export default function SectionOlivaMenu() {
             Prices are in Jordanian Dinar. Please ask our team about allergens
             or dietary preferences.
           </p>
+          <p className="opacity-70">Last updated on {updated}</p>
 
           <div>
             <p className="uppercase font-semibold text-primary-900 dark:text-primary-200 tracking-wide flex items-center justify-center gap-1.5">

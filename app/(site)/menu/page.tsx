@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import SectionOlivaMenu from "./_components/section-oliva-menu.client";
+import { getSections } from "./_utils";
 
 export const metadata: Metadata = {
   title: "Our Menu – Oliva Italian Restaurant",
@@ -20,6 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function OlivaMenu() {
-  return <SectionOlivaMenu />;
+export default async function Page() {
+  const { sections, fetchedAt } = await getSections();
+
+  return <SectionOlivaMenu sections={sections} fetchedAt={fetchedAt} />;
 }
