@@ -5,12 +5,19 @@ import SectionOurKitchen from "@/components/section-our-kitchen";
 import SectionStory from "@/components/section-story";
 import SectionThePlace from "@/components/section-the-place";
 
-export default function Home() {
+import { get } from "@vercel/edge-config";
+
+export default async function Home() {
+  const hero = (await get<{ title: string }>("hero")) ?? {
+    title: "Default Title",
+  };
+
   return (
     <>
       <SectionHero />
       <SectionStory />
 
+      <p> {hero?.title} is here </p>
       <SectionThePlace />
       <SectionOurKitchen />
       <SectionGallery />
