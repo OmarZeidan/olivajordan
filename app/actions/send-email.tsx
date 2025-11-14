@@ -49,7 +49,7 @@ export async function sendEmail(prevState: unknown, formData: FormData) {
     // Fields (match your form: name, email, phone, message)
     const name = sanitize(formData.get("name"));
     const email = sanitize(formData.get("email"));
-    const phone = sanitize(formData.get("phone"));
+    const tel = sanitize(formData.get("tel"));
     const message = sanitize(formData.get("message"));
 
     if (!name || !email || !message) {
@@ -102,7 +102,7 @@ export async function sendEmail(prevState: unknown, formData: FormData) {
           <p style="margin:6px 0;"><strong>Name:</strong> ${name}</p>
           <p style="margin:6px 0;"><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
           <p style="margin:6px 0;"><strong>Phone:</strong> ${
-            phone || "Not provided"
+            tel || "Not provided"
           }</p>
         </div>
 
@@ -125,7 +125,7 @@ export async function sendEmail(prevState: unknown, formData: FormData) {
       ``,
       `Name: ${name}`,
       `Email: ${email}`,
-      `Phone: ${phone || "Not provided"}`,
+      `Phone: ${tel || "Not provided"}`,
       ``,
       `Message:`,
       `${message}`,
